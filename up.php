@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php  
 
 function Up($data=''){
@@ -47,3 +48,34 @@ function Up($data=''){
 
 Up($_POST);
 ?>
+=======
+<?php 
+
+function Up($data=''){
+	//kiem tra xem file co ton tai khong
+	if (file_exists('val.php')) {
+		require 'val.php';
+		if (Val($data)) {
+			$res = Val($data);
+			// print_r($data);
+		}else{
+			// return 
+			echo $res['errs'];
+		}
+
+
+		// print_r($res);
+		echo 'ten la : '.$res['up_name'];
+		echo "\nEmail la : ".$res['up_email'];
+		echo "\nMat khau la : ".$res['up_pass'];
+	}else{
+		return false;
+	}
+}
+
+Up($_POST);
+
+
+
+ ?>
+>>>>>>> 39c6c2db5ea8a00c16dfba08ee91b18ffc12fc6e
