@@ -9,7 +9,7 @@
 <body>
 	<!-- dang nhap -->
 	<p>dang nhap</p>
-	<form action="/in.php" method="post" style="border: 1px solid #eee; padding: 100px; background: #888;">
+	<form action="in.php" method="post" style="border: 1px solid #eee; padding: 100px; background: #888;">
 		<input type="text" name="in_name_email"><br>
 		<input type="password" name="in_pass"><br>
 		<input type="submit">
@@ -17,7 +17,7 @@
 	<br>
 	<!-- dang ky -->
 	<p>dang ky</p>
-	<form action="/up.php" method="post" style="border: 1px solid #eee; padding: 100px;background: #666">
+	<form action="up.php" method="post" style="border: 1px solid #eee; padding: 100px;background: #666">
 		<input type="text" name="up_name"><br>
 		<input type="text" name="up_email"><br>
 		<input type="password" name="up_pass"><br>
