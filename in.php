@@ -1,4 +1,4 @@
-<?php  
+<?php
 
 function In($data=''){
 	//kiem tra xem file co ton tai khong
@@ -28,29 +28,6 @@ function In($data=''){
 					echo '<script language="javascript">alert("có lỗi"); window.location="http://localhost/function/index.php";</script>';
 				}
 			}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 		}else{
