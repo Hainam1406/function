@@ -36,11 +36,37 @@ function Val($arr=''){
 
 }
 
+// $arr_up = [
+// 	'ten' 		=> 	'an_sdsfd45fd',
+// 	'email' 	=> 	'hathanhan@gmail.com',
+// 	'password' 	=> 	'123',
+// 	'repass'	=>	'123'
 
-//check in
+// ];
+// $arr_in = [
+// 	'ten'		=> 	'Nguyen Hai Nam',
+// 	'password' 	=> 	'dffafaw11'
+
+// ];
+
+// print_r( Val($arr_in));
+// check in
 function In_val($arr=''){
-	echo 'in';
-	//nam
+	// khai bao mang tra ve
+	$result = [];
+	if(count($arr) == 2) {
+		if($arr['in_name_email'] !='' && $arr['in_pass'] !=''){
+			$result['in_name_email'] = preg_match('/^[A-z_0-9](\w|\.|_){5,32}/is',$arr['in_name_email']) !=false ?  $arr['in_name_email'] : 'Tên hoặc email chưa chính xác';
+			// $result['email'] = preg_match('/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}/is',$arr['email']) !=false ? $arr['email'] : 'email khong dung';
+			$result['in_pass'] = preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/is',$arr['in_pass']) != false ? $arr['in_pass'] : 'Mật khẩu k đúng định dạng';
+
+		}else{
+			$result['errs'] = 'Thông tin đăng nhập chưa đầy đủ';
+		}
+		return $result;
+	}else{
+		return false;
+	}
 }
 
 //check up
@@ -80,5 +106,4 @@ function Up_val($arr=''){
 		return false;
 	}
 }
-
 ?>

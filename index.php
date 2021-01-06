@@ -9,7 +9,7 @@
 <body>
 	<!-- dang nhap -->
 	<p>dang nhap</p>
-	<form action="/in.php" method="post" style="border: 1px solid #eee; padding: 100px; background: #888;">
+	<form action="in.php" method="post" style="border: 1px solid #eee; padding: 100px; background: #888;">
 		<input type="text" name="in_name_email"><br>
 		<input type="password" name="in_pass"><br>
 		<input type="submit">

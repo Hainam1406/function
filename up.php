@@ -1,4 +1,4 @@
-<?php  
+<?php 
 
 function Up($data=''){
 	//kiem tra xem file co ton tai khong
@@ -23,4 +23,7 @@ function Up($data=''){
 }
 
 Up($_POST);
-?>
+
+
+
+ ?>
