@@ -36,20 +36,7 @@ function Val($arr=''){
 
 }
 
-$arr_up = [
-	'ten' 		=> 	'an_sdsfd45fd',
-	'email' 	=> 	'hathanhan@gmail.com',
-	'password' 	=> 	'123',
-	'repass'	=>	'123'
 
-];
-$arr_in = [
-	'ten' 		=> 	'an',
-	'password' 	=> 	'123'
-
-];
-
-print_r( Val($arr_up));
 //check in
 function In_val($arr=''){
 	echo 'in';
@@ -62,19 +49,25 @@ function Up_val($arr=''){
 	$result = [];
 
 	if (count($arr) ==4) {
-		if ($arr['ten'] !='' && $arr['email']!='' && $arr['password'] !='' && $arr['repass'] !='') {
-			// echo 'ok';
+		if ($arr['up_name'] !='' && $arr['up_email']!='' && $arr['up_pass'] !='' && $arr['up_repass'] !='') {
+			echo '<pre>';
+			// die;
+
+
+			// print_r($arr);
 			// check ten dang nhap
-			$result['ten'] = preg_match('/^[A-z_0-9](\w|\.|_){5,32}/is',$arr['ten']) !=false ?  $arr['ten'] : 'ten chua dung'; 
-			$result['email'] = preg_match('/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}/is',$arr['email']) !=false ? $arr['email'] : 'email khong dung';
-			
+			$result['up_name'] = preg_match('/^[A-z_0-9](\w|\.|_){5,32}/is',$arr['up_name']) !=false ?  $arr['up_name'] : 'ten chua dung'; 
+
+			$result['up_email'] =/* preg_match('/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}/is',$arr['up_email']) !=false ?*/ $arr['up_email'] /*: 'email khong dung'*/;
+			// die;
+			// print_r($result);
 
 			// tim regex pass hoanf thanh - long
-			if ($arr['password'] != $arr['repass']) {
+			if ($arr['up_pass'] != $arr['up_repass']) {
 				$result['errs'] = '2 pass phai giong nhau';
 			}else{
-				$result['password'] = $arr['password'];
-				$result['repass'] = $arr['repass'];
+				$result['up_pass'] = $arr['up_pass'];
+				$result['up_repass'] = $arr['up_repass'];
 			}
 
 			
