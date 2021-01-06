@@ -1,0 +1,40 @@
+
+/*
+chuc nang dang nhap , dang ky
+index - form dang nhap , dang ky
+validate - 
+file xu ly dang nhap 
+file xu ly dang ky
+file connect database
+
+_____________________________________________
+
+database
+
+gom cac truong
+id(md5(name+email)) - name - email - pass(md5)
+
+____________________________________________
+1. file index
+
+chuc nang dang nhap , dang ky
+action qua file dang nhap (in.php) 	(1)
+action qua file dang ky (up.php) 	(2)
+
+(1) & (2) goi qua file val.php de xac nhan dau vao hop le
+_____________________________________________
+
+2. file val.php
+dau vao la 1 mang
+
+cau truc cua mang gom
+1 [
+	'ten'=>data,
+	'email'=>data,
+	'password'=>data,
+	'repass'=>data
+]
+
+
+ */
+die;
